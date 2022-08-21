@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에브리타임 - {{subTitle}}님</title>
+</head>
+<body>
+    <div>유저 정보 사이트</div>
+    <div>유저명 : {{subTitle}}</div>
+    <img src = "{{
+        url_for('static', filename=image_file) 
+    }}">
+
+    <button onclick="goBack()">뒤로</button>
+</body>
+</html>
+
+<script>
+    function goBack() {
+    window.history.back();
+  }
+</script>

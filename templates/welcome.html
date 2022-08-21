@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에브리타임</title>
+  </head>
+  <body>
+    <img
+      src="{{ url_for('static', filename=image_file) }}"
+      width="350px"
+      height="350px"
+    />
+
+    <div>
+      <button onclick="routeTo('login')">로그인</button>
+      <button onclick="routeTo('register')">회원가입</button>
+      <input placeholder="이름을 입력하세요" id='myname'/>
+      <button onclick="routeTo('mypage/' + document.getElementById('myname').value)">내 정보</button>
+    </div>
+  </body>
+</html>
+
+<script>
+    routeTo = (place) => {
+        window.location.href = "http://leeminjae0129.iptime.org:5050/" + place 
+    }
+</script>
